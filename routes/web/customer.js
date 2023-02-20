@@ -37,6 +37,11 @@ router.get("/book", function (req, res) {
 							info.lat = dataPlumb.lat;
 							info.long = dataPlumb.long;
 							info.rating = dataRating.rating;
+							info.starOne = dataRating.starOne;
+							info.starTwo = dataRating.starTwo;
+							info.starThree = dataRating.starThree;
+							info.starFour = dataRating.starFour;
+							info.starFive = dataRating.starFive;
 							infos.push(info);
 						}
 					}
