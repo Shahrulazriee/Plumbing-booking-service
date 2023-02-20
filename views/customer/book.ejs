@@ -29,13 +29,13 @@
 			.bindPopup(
 				`<h3>Name: <%= plumber.name %></h3>
 				<p>Phone no.: <%= plumber.phone_no %></p>
-				<br>
 				<p>Address: <%= plumber.adr1 %>, <%= plumber.adr2 %>, <%= plumber.poskod %>, <%= plumber.city %>, <%= plumber.state %></p>
-				<br>
-				<p>Rating: <%= plumber.rating %></p>
-				<br>
+				<p>Five Star: <%= plumber.starFive %></p>
+				<p>Four Star: <%= plumber.starFour %></p>
+				<p>Three Star: <%= plumber.starThree %></p>
+				<p>Two Star: <%= plumber.starTwo %></p>
+				<p>One Star: <%= plumber.starOne %></p>
 				<p>SSM registration number: <%= plumber.ssm %></p>
-				<br>
 				<form method='get' action='/customer/booking/<%= plumber.email %>'><button type='submit'>Book</button></form>`
 			)
 			.addTo(map);
