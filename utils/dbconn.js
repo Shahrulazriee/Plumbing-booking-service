@@ -1,4 +1,4 @@
 const DATABASECONNECTION =
-	"mongodb+srv://jibi:Disneyxd617@cluster0.zorj3d6.mongodb.net/test?retryWrites=true&w=majority";
+	"<your db connection>";
 
 module.exports = { DATABASECONNECTION };
