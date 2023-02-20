@@ -1,0 +1,19 @@
+* {
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+}
+
+.topnav {
+    background-color: #2980b9;
+    margin: -8px;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-bottom: 7px;
+}
+
+.regisbtn {
+    background-color: #2980b9;
+    border-style: ridge;
+    border-color: white;
+}

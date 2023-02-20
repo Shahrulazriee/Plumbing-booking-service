@@ -1,0 +1,16 @@
+<%- include ("../partials/_headerBiasa")-%>
+<body>
+	<div>
+		<h1>Admin login page</h1>
+		<div>
+			<form method="post" action="/api/admin/login">
+				<label>Email</label>
+				<input name="email" type="email" required />
+				<label>Password</label>
+				<input name="password" type="password" required />
+				<button type="submit">Login</button>
+			</form>
+		</div>
+	</div>
+</body>
+<%- include ("../partials/_footer")-%>

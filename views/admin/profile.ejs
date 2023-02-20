@@ -1,0 +1,21 @@
+<%- include ("../partials/_headerAdmin.ejs") -%>
+<h1>Admin Profile Page</h1>
+
+<label>Name</label>
+<p><%= name %></p>
+<br />
+<label>Email</label>
+<p><%= email %></p>
+<form method="post" action="/api/admin/updateprofile">
+	<input
+		type="text"
+		name="name"
+		value="<%= name %>"
+	/>
+	<input
+		type="text"
+		name="email"
+		value="<%= email %>"
+	/>
+	<button type="submit">Update</button>
+</form>

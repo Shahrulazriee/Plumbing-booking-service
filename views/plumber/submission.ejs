@@ -1,0 +1,17 @@
+<%- include ("../partials/_headerBiasa")-%>
+<body>
+	<div>
+		<div>
+			<h1>Submission page</h1>
+			<form method="post" action="/api/customer/login">
+				<label>SSM</label>
+				<input type="text" name="ssm" />
+				<br />
+				<label>Certificate</label>
+				<input type="file" name="cert" />
+				<button type="submit">Login</button>
+			</form>
+		</div>
+	</div>
+</body>
+<%- include ("../partials/_footer")-%>

@@ -1,0 +1,48 @@
+<%- include ("../partials/_headerMainCustomer.ejs") %>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<section class="testimonial py-5" id="testimonial">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 py-5 bg-primary text-white text-center ">
+                <div class=" ">
+                    <div class="card-body">
+                        <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                        <h2 class="py-3">Price Range</h2>
+                        <p>Customer Information</p>
+                        <p>Email: <%= data.custEmail %></p>
+                        <p>Problem: <%= data.problem %></p>
+                        <p>Id: <%= data._id %></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 py-5 border">
+                <h4 class="pb-4">Please fill your rate</h4>
+                <form method="post" action="/api/plumber/price/<%= data._id %>">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <input name="startPrice" placeholder="Start Price" class="form-control" type="startPrice">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <input name="endPrice" placeholder="End Price" class="form-control" type="endPrice">
+                        </div>
+                      </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn-danger">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<% if(message.message) {%>
+    <script>
+        alert("<%= message.message %>")
+    </script>
+<% } %>
+<style>
+   img {width:100%;} 
+</style>

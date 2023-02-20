@@ -1,0 +1,151 @@
+<%- include ("../partials/_headerMainPlumber.ejs") %>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+         
+</head>
+
+<from method="post" action="/api/plumber/updateprofile">
+<div class="container">
+<div class="container d-flex justify-content-center">
+    <div class="card p-3 py-4">
+        <div class="text-center"> 
+            <!-- <h3  class="mt-2"><%= data.name %></h3> <br> -->
+			
+            <form method="post" action="/api/plumber/updateprofile/<%= data._id %>">
+			<div class="text-center" class="row mt-3 mb-3"> 
+                <div class="text-center" class="col-md-4">
+                  <h5>Name</h5>
+                  <input type="text" name="name" value="<%= data.name %>" />
+                </div>
+              </div><br>
+			<div class="text-center" class="row mt-3 mb-3"> 
+			  <div class="text-center" class="col-md-4">
+				<h5>Email</h5>
+				<input type="text" name="email" value="<%= data.email %>" />
+			  </div>
+			</div><br>
+			<div class="text-center" class="row mt-3 mb-3">
+			  <div class="text-center" class="col-md-4">
+			  <h5>Phone Number</h5>
+              <input type="text" name="phone_no" value="<%= data.phone_no %>" />
+			  </div>
+			</div><br>
+			<div class="text-center" class="row mt-3 mb-3">
+			  <div  class="text-center" class="col-md-4">
+			  <h5>Address</h5>
+              <input type="text" name="adr1" value="<%= data.adr1 %>" />
+              <input type="text" name="adr2" value="<%= data.adr2 %>" />
+              <input type="text" name="poskod" value="<%= data.poskod %>" />
+              <input type="text" name="city" value="<%= data.city %>" />
+              <input type="text" name="state" value="<%= data.state %>" />
+			  </div>
+			</div><br>
+      <div class="text-center" class="row mt-3 mb-3">
+        <div class="text-center" class="col-md-4">
+          <h5>SSM Number</h5>
+          <input type="text" name="ssm" value="<%= data.ssm%>" />
+        </div>
+      </div><br>
+      <div class="text-center" class="row mt-3 mb-3">
+			  <div class="text-center" class="col-md-4">
+			  <h5>Latitude & Longitude</h5>
+          <input type="text" name="lat" value="<%= data.lat %>" /> <input type="text" name="long" value="<%= data.long %>" />
+			  </div>
+			</div><br>
+			
+	
+			<hr class="line">
+			
+			 <button class="profile_button px-5">Upload</button>
+            </form>
+		</div>
+			   
+        </div>
+    </div>
+</div>
+</div>
+</from>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+/* *
+ {
+    margin: 200;
+    padding: 1000;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif
+} */
+
+
+body {
+    height: 100%
+}
+
+body {
+    display: grid;  
+    background: #1C2951
+}
+
+.card {
+	color:rgb(0, 0, 0);
+    width: 350px;
+    border-radius: 10px;
+   background: linear-gradient(145deg, #5885AF, #5885AF);
+/* box-shadow:  20px 20px 60px #5885AF, 
+             -20px -20px 60px #5885AF; */
+    border: none
+}
+
+.neo-button {
+    width: 40px;
+    height: 40px;
+    outline: 0 !important;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 50%;
+background: linear-gradient(145deg, #5885AF, #C3E0E5);
+box-shadow: inset 20px 20px 60px #5885AF, 
+             inset -20px -20px 60px #5885AF;
+}
+
+.num{
+	
+	color:rgb(0, 0, 0) !important;
+}
+
+.line{
+	color:rgb(0, 0, 0);
+}
+
+.neo-button:active {
+   border-radius: 50%;
+background: #41729F;
+box-shadow:  28px 28px 57px #933da2, 
+             -28px -28px 57px #c351d6;
+}
+
+
+.profile_button{
+	color:#fff;
+	padding:10px; 
+   border:none;
+   outline:0 !important;
+border-radius: 50px;
+background: #274472;
+/* box-shadow:  28px 28px 57px #5885AF, 
+             -28px -28px 57px #5885AF; */
+	
+}
+</style>

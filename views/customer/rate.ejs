@@ -1,0 +1,60 @@
+<%- include ("../partials/_headerMainCustomer.ejs") %>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+<section class="testimonial py-5" id="testimonial">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 py-5 bg-primary text-white text-center ">
+                <div class=" ">
+                    <div class="card-body">
+                        
+                        <h2 class="py-3">Information</h2>
+                        <p>Email: <%= data.custEmail %></p>
+                        <p>Problem: <%= data.problem %></p>
+                        <p>ID: <%= data._id %></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 py-5 border">
+                <h4 class="pb-4">Rate Your Plumber Now</h4>
+                <form  method="post" action="/api/customer/rate/<%= data._id %>">
+
+                    <div class="form-row">
+                        <table>
+                            <tr>
+                             
+                                <td>1 star</td>
+                                <td>2 star</td>
+                                <td>3 star</td>
+                                <td>4 star</td>
+                                <td>5 star</td>
+                            </tr>
+                            <tr>
+                               
+                                <td><input name="rating" type="radio" value="1" /></td>
+                                <td><input name="rating" type="radio" value="2" /></td>
+                                <td><input name="rating" type="radio" value="3" /></td>
+                                <td><input name="rating" type="radio" value="4" /></td>
+                                <td><input name="rating" type="radio" value="5" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                   
+                    <div class="form-row">
+                        <button type="submit" class="btn btn-danger">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<style>
+body{
+    background-color: #ffffff;
+}
+   img {width:100%;} 
+</style>

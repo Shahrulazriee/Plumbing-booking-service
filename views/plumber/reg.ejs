@@ -1,0 +1,29 @@
+<form method="post" action="/api/customer/updateprofile">
+	<input type="text" name="name" value="<%= name %>" />
+	<br />
+	<input type="text" name="email" value="<%= email %>" />
+	<br />
+	<input type="text" name="phone_no" value="<%= phone_no %>" />
+	<br />
+	<input type="text" name="adr1" value="<%= adr1 %>" />
+	<br />
+	<input type="text" name="adr2" value="<%= adr2 %>" />
+	<br />
+	<input type="text" name="poskod" value="<%= poskod %>" />
+	<br />
+	<input type="text" name="city" value="<%= city %>" />
+	<br />
+	<input type="text" name="state" value="<%= state %>" />
+	<br />
+	<input type="text" name="lat" value="<%= lat %>" />
+	<br />
+	<input type="text" name="long" value="<%= long %>" />
+	<br />
+	<button type="submit">Update</button>
+</form>
+
+<% if(message.message) { %>
+<script>
+	alert("<%= message.message %>");
+</script>
+%>
